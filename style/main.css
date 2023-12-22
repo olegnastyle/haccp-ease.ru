@@ -24,7 +24,7 @@ footer{display: flex;padding: 10px;border-top: 1px solid aquamarine;}
 main {flex: 1 1 auto;}
 
 a {text-decoration: none;color: darkslategray;}
-h2 {color: aquamarine;text-align: center;}
+h2 {color: black;text-align: center;}
 
 .logo {display: flex;justify-content: space-between;align-items: center;zoom: 150%;text-transform: uppercase;cursor: pointer;}
 .logo:hover {filter: drop-shadow(0 0 5px aquamarine);transition: filter .3s linear;}
@@ -54,40 +54,104 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
-.stage1, .stage2, .stage3, .stage4 {
+.front {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
     cursor: pointer;
+    transform: perspective(1200px) rotateY(0deg);
 }
 
-.stage1:hover, .stage2:hover, .stage3:hover, .stage4:hover {
-    transition: all .1s linear;
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: aquamarine;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -240px;
+    cursor: pointer;
+    transform: perspective(1200px) rotateY(180deg);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(127, 255, 212, 0.6);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(127, 255, 212, 0.6);
+    box-shadow: 4px 4px 8px 0px rgba(127, 255, 212, 0.6);
+}
+
+.stage4 .back {
+    margin-top: -500px;
+}
+
+.stage1:hover >.front,
+.stage2:hover >.front,
+.stage3:hover >.front,
+.stage4:hover >.front {
+    transform: perspective(1200px) rotateY(-180deg);
+    z-index: -1;
+    transition: all .2s linear;
+}
+
+.stage1:hover >.back,
+.stage2:hover >.back,
+.stage3:hover >.back,
+.stage4:hover >.back {
+    transform: perspective(1200px) rotateY(0deg);
+    transition: all .2s linear;
 }
 
 .stage1 {
     grid-area: 1 / 1 / 2 / 2;
     height: 240px;
+    position: relative;
 }
 
 .stage2 {
     grid-area: 1 / 2 / 2 / 3;
     height: 240px;
+    position: relative;
 }
 
 .stage3 {
     grid-area: 2 / 1 / 3 / 3;
     height: 240px;
+    position: relative;
 }
 
 .stage4 {
     grid-area: 1 / 3 / 3 / 4;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes identifier {
+    0% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+    80% {
+        display: flex;
+    }
 }
