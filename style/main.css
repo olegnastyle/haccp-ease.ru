@@ -1,5 +1,5 @@
 :root {
-    --color-light: #50c878;
+    --color-light: #00a550;
 }
 
 * {margin: 0;padding: 0;box-sizing: border-box;scrollbar-width: thin;scroll-behavior: smooth;}
@@ -61,7 +61,7 @@ h2::before {
 
 nav {display: flex;gap: 40px;}
 nav a {display: flex;flex-direction: column;}
-nav a:after {content: '';border-bottom: solid 2px brown;opacity: 0;width: 100%;max-width: 0;}
+nav a:after {content: '';border-bottom: solid 2px var(--color-light);opacity: 0;width: 100%;max-width: 0;}
 nav a:hover {transform: scale(1.1);transition: transform .1s linear;}
 nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
