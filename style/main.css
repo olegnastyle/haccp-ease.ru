@@ -49,7 +49,7 @@ h2::before {
     content: '';
     height: 3px;
     width: 25px;
-    background-color: brown;
+    background-color: var(--color-light);
     display: block;
     margin-right: 10px;
 }
@@ -200,7 +200,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
 .service-top {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: red;
+    background-color: var(--color-light);
     color: aliceblue;
     padding: 5px 10px;
 }
