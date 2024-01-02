@@ -1,5 +1,7 @@
 :root {
-    --color-light: #00a550;
+    --color-emerald: #50c878; /* Изумрудный */
+    --color-pigmented: #00a550; /* Пигментный зелёный */
+    
 }
 
 * {margin: 0;padding: 0;box-sizing: border-box;scrollbar-width: thin;scroll-behavior: smooth;}
@@ -26,13 +28,13 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid var(--color-light);
+    border-bottom: 1px solid var(--color-pigmented);
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-footer{display: flex;padding: 10px;border-top: 1px solid var(--color-light);}
+footer{display: flex;padding: 10px;border-top: 1px solid var(--color-pigmented);}
 
 main {flex: 1 1 auto;}
 
@@ -49,19 +51,19 @@ h2::before {
     content: '';
     height: 3px;
     width: 25px;
-    background-color: var(--color-light);
+    background-color: var(--color-pigmented);
     display: block;
     margin-right: 10px;
 }
 
 .logo {display: flex;justify-content: space-between;align-items: center;zoom: 150%;text-transform: uppercase;cursor: pointer;}
-.logo:hover {filter: drop-shadow(0 0 5px var(--color-light));transition: filter .3s linear;}
-.logo p {background-color: white;color:var(--color-light);padding: 2px 5px;}
-.logo span {background-color: var(--color-light);color: white;padding: 2px 5px;}
+.logo:hover {filter: drop-shadow(0 0 5px var(--color-pigmented));transition: filter .3s linear;}
+.logo p {background-color: white;color:var(--color-pigmented);padding: 2px 5px;}
+.logo span {background-color: var(--color-pigmented);color: white;padding: 2px 5px;}
 
 nav {display: flex;gap: 40px;}
 nav a {display: flex;flex-direction: column;}
-nav a:after {content: '';border-bottom: solid 2px var(--color-light);opacity: 0;width: 100%;max-width: 0;}
+nav a:after {content: '';border-bottom: solid 2px var(--color-pigmented);opacity: 0;width: 100%;max-width: 0;}
 nav a:hover {transform: scale(1.1);transition: transform .1s linear;}
 nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
@@ -113,7 +115,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
     justify-content: center;
     gap: 10px;
     padding: 10px;
-    background-color: var(--color-light);
+    background-color: var(--color-pigmented);
     color: aliceblue;
     position: absolute;
     width: 100%;
@@ -200,7 +202,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
 .service-top {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: var(--color-light);
+    background-color: var(--color-pigmented);
     color: aliceblue;
     padding: 5px 10px;
 }
