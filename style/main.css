@@ -43,7 +43,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
 .number {display: flex;flex-direction: column;font-size: 23px;}
 .number a {display: flex;flex-direction: column;}
-.number a:hover {transform: scale(1.1);filter: drop-shadow(0 0 20px brown);transition: transform .2s linear;}
+.number a:hover {transform: scale(1.1);filter: drop-shadow(0 0 10px brown);transition: transform .2s linear;}
 .number p {font-size: 12px;display: flex;justify-content: end;}
 
 #stages {
@@ -82,6 +82,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
     gap: 10px;
     padding: 10px;
     background-color: var(--color-light);
+    color: aliceblue;
     position: absolute;
     width: 100%;
     height: 100%;
