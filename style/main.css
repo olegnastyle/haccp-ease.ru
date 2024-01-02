@@ -1,7 +1,6 @@
 :root {
     --color-emerald: #50c878; /* Изумрудный */
     --color-pigmented: #00a550; /* Пигментный зелёный */
-    
 }
 
 * {margin: 0;padding: 0;box-sizing: border-box;scrollbar-width: thin;scroll-behavior: smooth;}
@@ -41,6 +40,7 @@ main {flex: 1 1 auto;}
 a {text-decoration: none;color: black;}
 h2 {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     color: black;
     position: relative;
@@ -50,10 +50,10 @@ h2 {
 h2::before {
     content: '';
     height: 3px;
-    width: 25px;
-    background-color: var(--color-pigmented);
+    width: 40px;
+    background-color: var(--color-emerald);
     display: block;
-    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .logo {display: flex;justify-content: space-between;align-items: center;zoom: 150%;text-transform: uppercase;cursor: pointer;}
@@ -69,7 +69,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 
 .number {display: flex;flex-direction: column;font-size: 23px;}
 .number a {display: flex;flex-direction: column;}
-.number a:hover {transform: scale(1.1);filter: drop-shadow(0 0 10px brown);transition: transform .2s linear;}
+.number a:hover {transform: scale(1.1);filter: drop-shadow(0 0 10px #00a550);transition: transform .2s linear;}
 .number p {font-size: 12px;display: flex;justify-content: end;}
 
 #stages {
@@ -185,7 +185,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
 .services {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .service-item {
@@ -227,4 +227,57 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
     height: auto;
 }
 
+
+/* Отзывы */
+
+#feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1280px;
+    margin: 20px auto;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.feet-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    cursor: default;
+}
+
+.feet-item:hover .feet-top {background-color: var(--color-pigmented);transition: all .1s linear;}
+.feet-item:hover .feet-top::after {border-top: 10px solid var(--color-pigmented);transition: all .1s linear;}
+
+.feet-top {
+    background-color: var(--color-emerald);
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 10px;
+    position: relative;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.feet-top::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 30px; bottom: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid var(--color-emerald); /* Добавляем треугольник */
+}
+
+.feet-bottom img {border-radius: 50%;object-fit: cover;width: 40px;height: 40px;}
+.feet-bottom {
+    display: flex;
+    gap: 20px;
+}
 
