@@ -1,5 +1,5 @@
 :root {
-    --color-light: brown;
+    --color-light: #50c878;
 }
 
 * {margin: 0;padding: 0;box-sizing: border-box;scrollbar-width: thin;scroll-behavior: smooth;}
@@ -195,6 +195,7 @@ nav a:hover:after {opacity: 1;max-width: 100%;transition: max-width .3s linear;}
     overflow: hidden;
     width: 280px;
     height: max-content;
+    border-radius: 5px;
 }
 
 .service-top {
